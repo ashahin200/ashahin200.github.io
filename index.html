@@ -1,669 +1,1592 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- ============================================================
+    DOCUMENT SETTINGS
+    Edit metadata below. Existing commented-out title is preserved.
+    ============================================================ -->
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="Academic portfolio of Shahin Alom, PhD student and biomedical imaging researcher." name="description"/>
+    <!-- <title>Shahin Alom | PhD Researcher</title> -->
+    <style>
+            /* ============================================================
+         BASE STYLES: variables, layout, navigation, cards, and mobile rules
+         Keep this style block in its current order.
+         ============================================================ */
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      :root {
+        --bg: #f6f8fc;
+        --surface: #ffffff;
+        --text: #182235;
+        --muted: #5e6b80;
+        --primary: #175cd3;
+        --primary-soft: #eaf2ff;
+        --border: #dce3ee;
+        --shadow: 0 8px 24px rgba(23, 46, 82, 0.08);
+        --radius: 14px;
+      }
 
-  <title>My Portfolio</title>
-  <meta content="EEE Final year Student. Intern at APSCL " name="descriptison">
-  <meta content="" name="keywords">
-  <link rel="icon" href="/assets/img/profile.png" type="image/jpg">
-  
+      * {
+        box-sizing: border-box;
+      }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+      html {
+        scroll-behavior: smooth;
+      }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.55;
+      }
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
 
-  <!-- =======================================================
-  * Template Name: iPortfolio - v1.2.1
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+      a:hover, a:focus-visible {
+        text-decoration: underline;
+      }
 
-  <script src="https://cdn.tailwindcss.com"></script>
+      .container {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
 
+      header {
+        background: linear-gradient(120deg, #0c3f91, #175cd3);
+        color: #fff;
+        padding: 22px 0 30px;
+      }
 
-</head>
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+        padding-bottom: 24px;
+      }
 
-<body>
+      .brand {
+        font-size: 1.08rem;
+        font-weight: 750;
+        letter-spacing: .01em;
+      }
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
+      .nav-links a {
+        color: #fff;
+        font-size: .92rem;
+        opacity: .92;
+      }
 
-      <div class="profile">
-        <img src="assets/img/png.png" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Md. Shahin Alom</a></h1>
-		
-        <div class="social-links mt-3 text-center">
-          <a href="https://www.linkedin.com/in/ashahin200/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/ashahin200/" class="google-plus" target="_blank"><i class="bx bxl-github"></i></a>
-          <!-- <a href="https://www.instagram.com/satheesh22g/" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a> -->
-          <a href="https://www.facebook.com/ashahin200" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
-          <a href="https://www.youtube.com/channel/UCwCItw_xlM9aN_O6U8S-DtQ" class="youtube" target="_blank"><i class="bx bxl-youtube"></i></a>
-          <a href="https://publons.com/researcher/AAX-4744-2020/" class="publons" target="_blank"><i class="bx bxl-product-hunt"></i></a>
-		  <br>
-          
-          <div class="social-links mt-3 text-center">
-            <h3 class="bg-primary"><b>Contributor</b><br><h6 class="bg-primary py-1">
-			<a href="https://www.youtube.com/channel/UCKtanq2MXoFKsMxQxL7huUQ" class="youtube" target="_blank">
-			<i class="bx bxl-youtube bx-spin"></i></a><span><b>Learn Machine Learning in Bangla</b></span></h6></h3>
+      .hero {
+        max-width: 810px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin: 0 0 8px;
+        color: #dce9ff;
+        font-size: .8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        line-height: 1.12;
+      }
+
+      .hero p {
+        max-width: 740px;
+        margin: 12px 0 0;
+        font-size: 1.04rem;
+        color: #edf4ff;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        padding: 8px 14px;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        font-size: .92rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .button.light {
+        background: #fff;
+        color: #12489f;
+      }
+
+      .button.outline {
+        border-color: rgba(255,255,255,.7);
+        color: #fff;
+      }
+
+      .button:hover {
+        text-decoration: none;
+        filter: brightness(.98);
+      }
+
+      main {
+        padding: 22px 0 34px;
+      }
+
+      section {
+        margin-top: 18px;
+      }
+
+      .section-heading {
+        margin: 0 0 10px;
+        font-size: 1.3rem;
+        line-height: 1.25;
+      }
+
+      .section-intro {
+        margin: -3px 0 11px;
+        color: var(--muted);
+      }
+
+      .card {
+        padding: 18px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      .grid {
+        display: grid;
+        gap: 12px;
+      }
+
+      .grid.two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid.three {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .tag-list, .link-list, .timeline {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .tag-list li {
+        padding: 5px 10px;
+        border-radius: 999px;
+        background: var(--primary-soft);
+        color: #154b9f;
+        font-size: .88rem;
+        font-weight: 650;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 7px;
+      }
+
+      .timeline li {
+        display: grid;
+        grid-template-columns: 82px 1fr;
+        gap: 10px;
+        padding-bottom: 7px;
+        border-bottom: 1px solid #e8edf5;
+        font-size: .94rem;
+      }
+
+      .timeline li:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .date {
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .item {
+        padding: 13px 0;
+        border-bottom: 1px solid #e8edf5;
+      }
+
+      .item:first-child {
+        padding-top: 0;
+      }
+
+      .item:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .item h3 {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.35;
+      }
+
+      .meta {
+        margin: 3px 0 0;
+        color: var(--muted);
+        font-size: .9rem;
+      }
+
+      .item p {
+        margin: 6px 0 0;
+        color: #415069;
+        font-size: .93rem;
+      }
+
+      .education h3 {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      .education p {
+        margin: 3px 0 0;
+        color: var(--muted);
+        font-size: .92rem;
+      }
+
+      .education strong {
+        color: var(--text);
+      }
+
+      footer {
+        padding: 18px 0 24px;
+        color: var(--muted);
+        font-size: .88rem;
+        text-align: center;
+      }
+
+      @media (max-width: 760px) {
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+          padding-bottom: 20px;
+        }
+
+        .grid.two, .grid.three {
+          grid-template-columns: 1fr;
+        }
+
+        .timeline li {
+          grid-template-columns: 72px 1fr;
+        }
+
+        header {
+          padding-top: 18px;
+        }
+
+        main {
+          padding-top: 16px;
+        }
+
+        .card {
+          padding: 15px;
+        }
+
+      }
+    </style>
+    <style>
+            /* ============================================================
+         CUSTOM STYLES: faculty banner, research sections, and responsive overrides
+         Keep this style block in its current order.
+         ============================================================ */
+
+      header {
+        background: linear-gradient(115deg,#192e41,#234e67);
+      }
+
+      .brand {
+        color: white;
+      }
+
+      .faculty-hero {
+        max-width: none;
+        display: grid;
+        grid-template-columns: minmax(0,1fr) 250px;
+        gap: 32px;
+        align-items: center;
+      }
+
+      .faculty-hero h1 {
+        font-size: clamp(2rem,4vw,3rem);
+        font-weight: 500;
+      }
+
+      .faculty-hero .faculty-eyebrow {
+        margin: 0 0 14px;
+        font-size: .75rem;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: #b8d9ef;
+      }
+
+      .faculty-hero .faculty-role {
+        font-size: .94rem;
+      }
+
+      .faculty-hero .faculty-specialties {
+        font-size: 1.12rem;
+        font-weight: 650;
+        line-height: 1.65;
+      }
+
+      .faculty-hero .faculty-description {
+        font-size: .87rem;
+        line-height: 1.65;
+      }
+
+      .faculty-profiles {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .faculty-profiles a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 9px 12px;
+        background: white;
+        color: #193c52;
+        border-radius: 7px;
+        font-size: .79rem;
+      }
+
+      .faculty-profiles span {
+        color: #4b88b6;
+      }
+
+      .photo-wrap img,.photo-fallback {
+        width: 280px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #a9c7db;
+      }
+
+      .photo-fallback {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #294d65;
+        font-size: 3.5rem;
+      }
+
+      .photo-wrap [hidden] {
+        display: none;
+      }
+
+      #ece-interests {
+        border-top: 1px solid var(--border);
+        padding-top: 16px;
+      }
+
+      .focus-intro {
+        font-size: .88rem;
+        margin: 0 0 10px;
+        line-height: 1.65;
+      }
+
+      .focus-grid {
+        display: grid;
+        grid-template-columns: repeat(3,minmax(0,1fr));
+        gap: 10px;
+      }
+
+      .focus-grid article {
+        padding: 14px;
+        border: 1px solid var(--border);
+        border-radius: 9px;
+        background: #f4f8fb;
+      }
+
+      .focus-grid h3 {
+        font-size: .94rem;
+        font-weight: 500;
+        margin: 0 0 7px;
+      }
+
+      .focus-grid p {
+        font-size: .84rem;
+        margin: 0;
+        line-height: 1.65;
+      }
+
+      #updates .timeline {
+        gap: 0;
+      }
+
+      #updates .timeline li {
+        display: block;
+        padding: 9px 0;
+        font-style: normal;
+        font-size: .9rem;
+        line-height: 1.65;
+        margin: 0;
+      }
+
+      #updates .timeline li>span:first-child {
+        font-weight: 700;
+        color: #175b89;
+        margin-right: 6px;
+      }
+
+      #updates b {
+        font-weight: 600;
+      }
+
+      #research h4,.restored-project h4 {
+        font-size: 1rem;
+        line-height: 1.45;
+        margin: 0 0 8px;
+      }
+
+      #research .section-intro {
+        font-size: .94rem;
+        font-weight: 400;
+      }
+
+      #research em,.restored-project em {
+        font-style: normal;
+      }
+
+      #research ul,.restored-project ul {
+        margin: 8px 0 0;
+        padding-left: 18px;
+      }
+
+      #preprints a {
+        font-size: 1.02rem;
+      }
+
+      #preprints p {
+        margin-bottom: 0;
+      }
+
+      .education-item {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .education-item:last-child {
+        border-bottom: 0;
+      }
+
+      .education-item h4 {
+        font-size: .95rem;
+        margin: 0 0 5px;
+      }
+
+      .education-item h5 {
+        font-size: .83rem;
+        margin: 0 0 5px;
+        color: var(--muted);
+      }
+
+      .education-item b {
+        font-size: .88rem;
+      }
+
+      .certificate-grid {
+        display: grid;
+        grid-template-columns: repeat(3,minmax(0,1fr));
+        gap: 12px;
+      }
+
+      .certificate-grid a {
+        padding: 8px;
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+      }
+
+      .certificate-grid img {
+        width: 100%;
+        height: 150px;
+        object-fit: contain;
+      }
+
+      #contact .info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+
+      #contact .info h4 {
+        margin: 0 0 6px;
+      }
+
+      #contact .info p {
+        margin: 0;
+      }
+
+      .additional-links {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-top: 16px;
+        padding-top: 12px;
+        border-top: 1px solid var(--border);
+        font-size: .9rem;
+      }
+
+      a:focus-visible {
+        outline: 3px solid #75bde7;
+        outline-offset: 3px;
+      }
+
+      @media (max-width:900px) {
+        .faculty-hero {
+          grid-template-columns: minmax(0,1fr) 180px;
+          gap: 20px;
+        }
+
+        .photo-wrap img,.photo-fallback {
+          width: 180px;
+          height: 180px;
+        }
+
+      }
+
+      @media (max-width:640px) {
+        .faculty-hero {
+          grid-template-columns: 1fr;
+        }
+
+        .photo-wrap img,.photo-fallback {
+          width: 150px;
+          height: 150px;
+        }
+
+        .focus-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .certificate-grid {
+          grid-template-columns: repeat(2,minmax(0,1fr));
+        }
+
+        .faculty-hero .faculty-specialties {
+          font-size: 1rem;
+        }
+
+      }
+
+      @media (prefers-reduced-motion:reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ============================================================
+    EDITING GUIDE
+    1. Find a section using its ID or the headings below.
+    2. Copy an existing entry within that section to add content.
+    3. Add newest updates first; keep opening and closing tags paired.
+    4. The existing commented-out blocks remain inactive.
+    ============================================================ -->
+    <!-- ============================================================
+    HEADER: navigation, introduction, profile links, and portrait
+    ============================================================ -->
+    <header>
+      <div class="container">
+        <!-- NAVIGATION: add a link using href="#your-section-id". -->
+        <nav aria-label="Main navigation" class="nav">
+          <div class="nav-links">
+            <a href="#about">
+              About
+            </a>
+            <a href="#updates">
+              Updates
+            </a>
+            <a href="#research">
+              Research
+            </a>
+            <a href="#projects">
+              Projects
+            </a>
+            <a href="#contact">
+              Contact
+            </a>
           </div>
-       
-                  
-        </div>
-      </div>
-
-      <nav class="nav-menu">
-        <ul>
-          <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio"><i class="bx bx-book-content"></i> Gallery</a></li>
-          <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
-
-        </ul>
-      </nav><!-- .nav-menu -->
-      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <div style="background-color:rgb(0, 132, 255)"> <h1>Md. Shahin Alom</h1> </div>
-      <div style="background-color:rgb(128, 60, 66)"> <p>Hi there I'm a <span class="typed" data-typed-items="Deep Learning & Computer Vision Researcher, Robotics and Embedded System Designer, Programmer "></span></p> </div>
-    </div>
-  </section><!-- End Hero -->
-
-  <!-- Main -->
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section  class="about container">
-     <div class="row">
-       
-       <div class="col-lg-8 pt-0 pt-lg-0 content" data-aos="fade-left">
-       <div class="section-title" >
-         <h2>About</h2>
-         <style>
-           div {
-             text-align: justify;
-             text-justify: inter-word;
-            }
-            </style>
-              
+        </nav>
+        <div class="hero faculty-hero">
+          <div class="hero-copy">
+            <h1>
+              Md. Shahin Alom
+            </h1>
+            <p class="faculty-role">
+              PhD Candidate · North Carolina A&T State University
+            </p>
+            <p class="faculty-specialties">
+              Artificial Intelligence · Deep Learning · Image Processing
+              <br/>
+              Signal Processing · Data Analysis
+            </p>
+            <p class="faculty-description">
+              Developing machine-learning and computer-vision methods for biomedical imaging, with applications in cancer research and Alzheimer’s disease.
+            </p>
+            <div class="faculty-profiles">
+              <!-- PROFILE LINKS: copy one anchor to add another profile; update its URL and label. -->
+              <a href="https://scholar.google.com/citations?hl=en&user=BjRRjtQAAAAJ&view_op=list_works&sortby=pubdate" rel="noopener noreferrer" target="_blank">
+                Google Scholar
+                <span aria-hidden="true">
+                  ↗
+                </span>
+              </a>
+              <a href="https://www.researchgate.net/profile/Md-Shahin-Alom/research" rel="noopener noreferrer" target="_blank">
+                ResearchGate
+                <span aria-hidden="true">
+                  ↗
+                </span>
+              </a>
+              <a href="https://www.linkedin.com/in/ashahin200/" rel="noopener noreferrer" target="_blank">
+                LinkedIn
+                <span aria-hidden="true">
+                  ↗
+                </span>
+              </a>
+              <a href="https://publons.com/researcher/AAX-4744-2020/" rel="noopener noreferrer" target="_blank">
+                Publons
+                <span aria-hidden="true">
+                  ↗
+                </span>
+              </a>
+              <a href="https://github.com/ashahin200/" rel="noopener noreferrer" target="_blank">
+                GitHub
+                <span aria-hidden="true">
+                  ↗
+                </span>
+              </a>
+              <a href="https://www.youtube.com/channel/UCwCItw_xlM9aN_O6U8S-DtQ" rel="noopener noreferrer" target="_blank">
+                YouTube
+                <span aria-hidden="true">
+                  ↗
+                </span>
+              </a>
             </div>
-              <div>
-                <p class="">
-                  I am a second year PhD Student at the <a href="https://sites.google.com/site/sunilgaire/home?authuser=0#h.p_ID_38"> <b>Gaire’s Interdisciplinary Lab</b></a>  of <b>North Carolina A&T State University</b>. I am supervised by <a target="_blank" href="https://sites.google.com/site/sunilgaire"> <b>Dr. Sunil Kumar Gaire </b></a>. I work on Machine learning, Biomedical imaging, Deep Learning, Computer Vision in cancer research for my doctoral research.
-                </p> 
-              </div>
+            <div class="hero-actions">
+              <a class="button light" href="#research">
+                View research
+              </a>
+              <a class="button outline" href="#contact">
+                Get in touch
+              </a>
+            </div>
           </div>
-          <div class="col-lg-4 " data-aos="fade-right">
-            
-            <img src="assets/img/profile-img.jpg" class="img-fluid h-52 lg:pl-2" alt="" style="border-radius: 50%">
-           
+          <div class="photo-wrap">
+            <!-- PHOTO: update the image src if needed. Keep the fallback directly after the image. -->
+            <img alt="Portrait of Md. Shahin Alom" height="250" onerror="this.hidden=true;this.nextElementSibling.hidden=false;" src="assets/img/profile-img.jpg" width="250"/>
+            <div aria-label="Portrait placeholder" class="photo-fallback" hidden="">
+              SA
+            </div>
           </div>
         </div>
-    </section>
-
-    <!-- Update section -->
-    <section class="about container">
-      <!-- <br> -->
-      <div class="section-title">
-        <h2>Update</h2>
       </div>
-      <div class="pt-0 pt-lg-0 content" data-aos="fade-left">
-      <ul class="font-italic">
-
-              
-              <li><span class="font-semibold">Mar 2025:</span> Successfully Completed My Masters Thesis <b>MS in Electrical Engineering with concentration in AI</b></li>
-              <li><span class="font-semibold">Mar 2025:</span> 1 Poster Presented at <a class="underline text-blue-500"  href="https://www.linkedin.com/posts/stephanie-luster-teasley-pass-6a58833_ncatengineers-ncat-ncatcoe-activity-7309015074516393985-ROXC/">14th annual Dr. Bala Ram Graduate Research Poster Competition NC A&T</a></li>      
-              <li><span class="font-semibold">Mar 2025:</span> 1 Conference paper published at <a class="underline text-blue-500" href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/13331/1333102/Automatic-nuclei-segmentation-of-label-free-chromatin-sensitive-partial-wave/10.1117/12.3041116.short">SPIE digital library</a></li>
-              <li><span class="font-semibold">Jan 2025:</span> Awarded "Bangladesh-Sweden Trust Fund (BSTF) Travel- Grant" <a class="underline text-blue-500" href="https://erd.gov.bd/sites/default/files/files/erd.portal.gov.bd/notices/2eb4e05b_8e52_428d_b937_316e4d1f1dce/%E0%A7%A9%E0%A7%AF%E0%A7%AD%20%E0%A6%9C%E0%A6%A8%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%B0%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE.pdf#page=3.10">See the List</a></li>   
-              <li><span class="font-semibold">Jan 2025:</span> Partial Travel Fund Awarded from "SPIE Student Conference Support"</li>
-              <li><span class="font-semibold">Nov 2024:</span> 1 Journal Paper Published at <a class="underline text-blue-500" href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-32-25-45052&id=564803">Optics Express, Q-1, IF=3.2, H-Index</a></li>
-              <li><span class="font-semibold">May 2024:</span> 1 Poster Presented by Co-author at <a class="underline text-blue-500" href="https://physicalgenomics.northwestern.edu/news-events/symposium-on-physical-genomics.html">Symposium on Physical Genomics</a></li>
-              <li><span class="font-semibold">Apr 2024:</span> Serving as a reviewer for <a class="underline text-blue-500"  href="https://tockify.com/aggiehonors/detail/1758/1713276000000?tags=Symposium&startms=1651118400000">Undergraduate Research Symposium</a></li>
-              <li><span class="font-semibold">Mar 2024:</span> 1 Poster Presented at <a class="underline text-blue-500"  href="https://www.linkedin.com/feed/update/urn:li:activity:7174526207185563648/">NC A&T</a></li>
-              <li><span class="font-semibold">Aug 2023:</span> Started PhD at <a class="underline text-blue-500"  href="https://www.ncat.edu/">NC A&T</a></li>
-              <li><span class="font-semibold">Jul 2021:</span> 1 Paper accepted at <a class="underline text-blue-500"  href="https://ieeexplore.ieee.org/xpl/conhome/9528078/proceeding">ACMI</a></li>
-              <li><span class="font-semibold">Jun 2021:</span> 1 Paper accepted at <a class="underline text-blue-500"  href="https://ieeexplore.ieee.org/xpl/conhome/9230456/proceeding">TENSYMP</a></li>
-              <li><span class="font-semibold">May 2021:</span> Graduated form <a class="underline text-blue-500"  href="https://www.hstu.ac.bd/">HSTU</a></li>
-              <li><span class="font-semibold">Apr 2021:</span> 1 Poster accepted at <a class="underline text-blue-500"  href="https://ieeexplore.ieee.org/xpl/conhome/9396769/proceeding">ICICT4SD</a></li>
-              <li><span class="font-semibold">Nov 2020:</span> 1 Poster accepted at <a class="underline text-blue-500"  href="https://ieeexplore.ieee.org/xpl/conhome/9081812/proceeding">ICBSLP</a></li>
-              <li><span class="font-semibold">Jul 2020:</span> 1 Paper accepted at <a class="underline text-blue-500"  href="https://ieeexplore.ieee.org/xpl/conhome/9211590/proceeding">ICCNT</a></li>
-              <li><span class="font-semibold">Jun 2020:</span> 1 Paper accepted at <a class="underline text-blue-500"  href="https://ieeexplore.ieee.org/xpl/conhome/9230456/proceeding">TENSYMP</a></li>
-              <li><span class="font-semibold">Dec 2019:</span> 1 Paper accepted at <a class="underline text-blue-500"  href="https://ieeexplore.ieee.org/xpl/conhome/9051611/proceeding">STI</a></li>
-              <li><span class="font-semibold">Dec 2019:</span> 1 Paper accepted at <a class="underline text-blue-500"  href="https://ieeexplore.ieee.org/xpl/conhome/9051908/proceeding">EICT</a></li>
-              <li><span class="font-semibold">Sep 2019:</span> 2 Paper accepted  at <a class="underline text-blue-500"  href="https://ieeexplore.ieee.org/xpl/conhome/8966522/proceeding">ICAEE</a></li>
-              <li><span class="font-semibold">Jul 2019:</span> 1 Paper accepted  at <a class="underline text-blue-500"  href="https://ieeexplore.ieee.org/xpl/conhome/8932651/proceeding">ICCNT</a></li>
-              <li><span class="font-semibold">Mar 2019:</span> 2 Paper accepted  at <a class="underline text-blue-500"  href="https://ieeexplore.ieee.org/xpl/conhome/8931128/proceeding">ICASERT</a></li>
-              
-            
+    </header>
+    <!-- END HEADER -->
+    <main class="container">
+      <!-- ============================================================
+    ABOUT: biography and laboratory links
+    ============================================================ -->
+      <section id="about">
+        <h2 class="section-heading">
+          About
+        </h2>
+        <div class="card">
+          <p class="">
+            I am a
+            <b>
+              PhD candidate
+            </b>
+            in the Department of Electrical and Computer Engineering at
+            <b>
+              North Carolina A&T State University
+            </b>
+            , 
+                  working in
+            <a href="https://sites.google.com/site/sunilgaire/home?authuser=0#h.p_ID_38">
+              <b>
+                Gaire’s Interdisciplinary Lab
+              </b>
+            </a>
+            under the supervision of
+            <a href="https://sites.google.com/site/sunilgaire" rel="noopener noreferrer" target="_blank">
+              <b>
+                Dr. Sunil Kumar Gaire
+              </b>
+            </a>
+            . 
+                  My doctoral research focuses on developing machine learning, deep learning, and computer vision methods for biomedical imaging applications in
+            <b>
+              Cancer Research
+            </b>
+            &
+            <b>
+              Alzheimer's Diseases
+            </b>
+            .
+                  I am also interested in developing practical, reliable image-analysis methods that support scientific discovery and clinical research.
+          </p>
+        </div>
+      </section>
+      <!-- END SECTION: about -->
+      <!-- ============================================================
+    RESEARCH DIRECTION AND ECE INTERESTS
+    ============================================================ -->
+      <section id="ece-interests">
+        <h2 class="section-heading">
+          Research direction & ECE interests
+        </h2>
+        <p class="focus-intro">
+          My research centers on AI and deep learning for image analysis and biomedical applications. My broader ECE interests include image and signal processing, data analysis, and the development of data-driven computational methods.
+        </p>
+        <div class="focus-grid">
+          <article>
+            <h3>
+              AI & deep learning
+            </h3>
+            <p>
+              Machine learning, computer vision, and neural-network methods for classification and segmentation.
+            </p>
+          </article>
+          <article>
+            <h3>
+              Image processing
+            </h3>
+            <p>
+              Biomedical image analysis, microscopy, MRI, and quantitative image interpretation.
+            </p>
+          </article>
+          <article>
+            <h3>
+              Signal processing & data analysis
+            </h3>
+            <p>
+              Interests in extracting useful information from imaging signals and data through computational analysis.
+            </p>
+          </article>
+        </div>
+      </section>
+      <!-- END SECTION: ece-interests -->
+      <!-- ============================================================
+    UPDATES: chronological announcements, newest first
+    ============================================================ -->
+      <section id="updates">
+        <h2 class="section-heading">
+          Updates
+        </h2>
+        <div class="card">
+          <ul class="timeline">
+            <!-- ADD UPDATES HERE: copy a complete li block below, edit the date/text/link, and insert it first. -->
+            <!-- UPDATE 01 -->
+            <li>
+              <span class="font-semibold">
+                Oct 2026:
+              </span>
+              Our paper titled
+              <b>
+                "CsPWS-NucSeg: automated nuclei segmentation of chromatin-sensitive partial wave spectroscopic microscopy images using fine-tuned foundation model,",
+              </b>
+              is accepted for oral presentation at the SPIE Photonics West 2027 Conference, in San Francisco, CA.
+            </li>
+            <!-- UPDATE 02 -->
+            <li>
+              <span class="font-semibold">
+                Oct 2026:
+              </span>
+              Our paper titled
+              <b>
+                "Efficient multi-modal medical image classification using Swin Transformer,",
+              </b>
+              is accepted for poster presentation at the SPIE Photonics West 2027 Conference, in San Francisco, CA.
+            </li>
+            <!-- UPDATE 03 -->
+            <li>
+              <span class="font-semibold">
+                Jul 2026:
+              </span>
+              Our new paper titled,
+              <b>
+                "Detection and Segmentation of Brain Tumor from MRI Image Signal using a Two-stage Deep Learning Framework,"
+              </b>
+              has accepted for poster presentation in the IEEE 25th International Conference on Machine Learning and Applications (ICMLA), which will held in Rochester, Michigan.
+            </li>
+            <!-- UPDATE 04 -->
+            <li>
+              <span class="font-semibold">
+                Jun 2026:
+              </span>
+              Our new paper titled,
+              <b>
+                "Deep Learning-Based Volumetric Tracer Diffusion Segmentation of Focused Ultrasound Modulated Glymphatic Clearance in Rat Brain,"
+              </b>
+              has accepted for poster presentation in the IEEE International Ultrasonics Symposium in Raleigh, NC.
+            </li>
+            <!-- UPDATE 05 -->
+            <li>
+              <span class="font-semibold">
+                Mar 2026:
+              </span>
+              Presented a poster  with title,
+              <b>
+                “Seeing Beyond the Scan: AI-Driven Brain Tumor Detection and Segmentation in MRI images”
+              </b>
+              in the NCAT College of Engineering, 15th Annual Dr. Bala Ram Graduate Research Poster Competition.
+            </li>
+            <!-- UPDATE 06 -->
+            <li>
+              <span class="font-semibold">
+                Nov 2025:
+              </span>
+              AI for Focus Ultrasound imaging research, has been accepted as poster presentation with title
+              <b>
+                “Deep-learning-driven transcranial focused ultrasound for enhancing glymphatic clearance in Alzheimer’s treatment",
+              </b>
+              in the SPIE Photonics West 2026 conference, in San Francisco, CA.
+            </li>
+            <!-- UPDATE 07 -->
+            <li>
+              <span class="font-semibold">
+                Oct 2025:
+              </span>
+              Presented a Poster by Co-Author, Abhijit, with Title:
+              <b>
+                Ultrasound-Mediated Glymphatic Transport Analysis using Deep Learning,
+              </b>
+              at
+              <a class="underline text-blue-500" href="https://www.researchgate.net/publication/404536676_Ultrasound-Mediated_Glymphatic_Transport_Analysis_using_Deep_Learning">
+                2025 BMES Annual meeting in San Diego, CA.
+              </a>
+            </li>
+            <!-- UPDATE 08 -->
+            <li>
+              <span class="font-semibold">
+                Mar 2025:
+              </span>
+              Successfully Completed My Master of Science thesis in
+              <b>
+                Electrical Engineering with concentration in Artificial Intelligence
+              </b>
+            </li>
+            <!-- UPDATE 09 -->
+            <li>
+              <span class="font-semibold">
+                Mar 2025:
+              </span>
+              Presented a poster at
+              <a class="underline text-blue-500" href="https://www.linkedin.com/posts/stephanie-luster-teasley-pass-6a58833_ncatengineers-ncat-ncatcoe-activity-7309015074516393985-ROXC/">
+                14th annual Dr. Bala Ram Graduate Research Poster Competition NC A&T.
+              </a>
+            </li>
+            <!-- UPDATE 10 -->
+            <li>
+              <span class="font-semibold">
+                Mar 2025:
+              </span>
+              1 Conference paper published at
+              <a class="underline text-blue-500" href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/13331/1333102/Automatic-nuclei-segmentation-of-label-free-chromatin-sensitive-partial-wave/10.1117/12.3041116.short">
+                SPIE digital library.
+              </a>
+            </li>
+            <!-- UPDATE 11 -->
+            <li>
+              <span class="font-semibold">
+                Jan 2025:
+              </span>
+              Awarded "Bangladesh-Sweden Trust Fund (BSTF) Travel- Grant"
+              <a class="underline text-blue-500" href="https://erd.gov.bd/sites/default/files/files/erd.portal.gov.bd/notices/2eb4e05b_8e52_428d_b937_316e4d1f1dce/%E0%A7%A9%E0%A7%AF%E0%A7%AD%20%E0%A6%9C%E0%A6%A8%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%B0%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE.pdf#page=3.10">
+                See the List.
+              </a>
+            </li>
+            <!-- UPDATE 12 -->
+            <li>
+              <span class="font-semibold">
+                Jan 2025:
+              </span>
+              Partial Travel Fund Awarded from "SPIE Student Conference Support".
+            </li>
+            <!-- UPDATE 13 -->
+            <li>
+              <span class="font-semibold">
+                Nov 2024:
+              </span>
+              1 Journal Paper Published at
+              <a class="underline text-blue-500" href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-32-25-45052&id=564803">
+                Optics Express, Q-1, IF=3.2, H-Index
+              </a>
+            </li>
+            <!-- UPDATE 14 -->
+            <li>
+              <span class="font-semibold">
+                May 2024:
+              </span>
+              1 Poster Presented by Co-author at
+              <a class="underline text-blue-500" href="https://physicalgenomics.northwestern.edu/news-events/symposium-on-physical-genomics.html">
+                Symposium on Physical Genomics.
+              </a>
+            </li>
+            <!-- UPDATE 15 -->
+            <li>
+              <span class="font-semibold">
+                Apr 2024:
+              </span>
+              Serving as a reviewer for
+              <a class="underline text-blue-500" href="https://tockify.com/aggiehonors/detail/1758/1713276000000?tags=Symposium&startms=1651118400000">
+                Undergraduate Research Symposium.
+              </a>
+            </li>
+            <!-- UPDATE 16 -->
+            <li>
+              <span class="font-semibold">
+                Mar 2024:
+              </span>
+              1 Poster Presented at
+              <a class="underline text-blue-500" href="https://www.linkedin.com/feed/update/urn:li:activity:7174526207185563648/">
+                NC A&T
+              </a>
+            </li>
+            <!-- UPDATE 17 -->
+            <li>
+              <span class="font-semibold">
+                Aug 2023:
+              </span>
+              Started PhD at
+              <a class="underline text-blue-500" href="https://www.ncat.edu/">
+                NC A&T
+              </a>
+            </li>
+            <!-- UPDATE 18 -->
+            <li>
+              <span class="font-semibold">
+                Jul 2021:
+              </span>
+              1 Paper accepted at
+              <a class="underline text-blue-500" href="https://ieeexplore.ieee.org/xpl/conhome/9528078/proceeding">
+                ACMI
+              </a>
+            </li>
+            <!-- UPDATE 19 -->
+            <li>
+              <span class="font-semibold">
+                Jun 2021:
+              </span>
+              1 Paper accepted at
+              <a class="underline text-blue-500" href="https://ieeexplore.ieee.org/xpl/conhome/9230456/proceeding">
+                TENSYMP
+              </a>
+            </li>
+            <!-- UPDATE 20 -->
+            <li>
+              <span class="font-semibold">
+                May 2021:
+              </span>
+              Graduated form
+              <a class="underline text-blue-500" href="https://www.hstu.ac.bd/">
+                Hajee Mohammad Danesh Science and Technology University, Dinajpur, Bangladesh
+              </a>
+            </li>
+            <!-- UPDATE 21 -->
+            <li>
+              <span class="font-semibold">
+                Apr 2021:
+              </span>
+              1 Poster accepted at
+              <a class="underline text-blue-500" href="https://ieeexplore.ieee.org/xpl/conhome/9396769/proceeding">
+                ICICT4SD
+              </a>
+            </li>
+            <!-- UPDATE 22 -->
+            <li>
+              <span class="font-semibold">
+                Nov 2020:
+              </span>
+              1 Poster accepted at
+              <a class="underline text-blue-500" href="https://ieeexplore.ieee.org/xpl/conhome/9081812/proceeding">
+                ICBSLP
+              </a>
+            </li>
+            <!-- UPDATE 23 -->
+            <li>
+              <span class="font-semibold">
+                Jul 2020:
+              </span>
+              1 Paper accepted at
+              <a class="underline text-blue-500" href="https://ieeexplore.ieee.org/xpl/conhome/9211590/proceeding">
+                ICCNT
+              </a>
+            </li>
+            <!-- UPDATE 24 -->
+            <li>
+              <span class="font-semibold">
+                Jun 2020:
+              </span>
+              1 Paper accepted at
+              <a class="underline text-blue-500" href="https://ieeexplore.ieee.org/xpl/conhome/9230456/proceeding">
+                TENSYMP
+              </a>
+            </li>
+            <!-- UPDATE 25 -->
+            <li>
+              <span class="font-semibold">
+                Dec 2019:
+              </span>
+              1 Paper accepted at
+              <a class="underline text-blue-500" href="https://ieeexplore.ieee.org/xpl/conhome/9051611/proceeding">
+                STI
+              </a>
+            </li>
+            <!-- UPDATE 26 -->
+            <li>
+              <span class="font-semibold">
+                Dec 2019:
+              </span>
+              1 Paper accepted at
+              <a class="underline text-blue-500" href="https://ieeexplore.ieee.org/xpl/conhome/9051908/proceeding">
+                EICT
+              </a>
+            </li>
+            <!-- UPDATE 27 -->
+            <li>
+              <span class="font-semibold">
+                Sep 2019:
+              </span>
+              2 Paper accepted  at
+              <a class="underline text-blue-500" href="https://ieeexplore.ieee.org/xpl/conhome/8966522/proceeding">
+                ICAEE
+              </a>
+            </li>
+            <!-- UPDATE 28 -->
+            <li>
+              <span class="font-semibold">
+                Jul 2019:
+              </span>
+              1 Paper accepted  at
+              <a class="underline text-blue-500" href="https://ieeexplore.ieee.org/xpl/conhome/8932651/proceeding">
+                ICCNT
+              </a>
+            </li>
+            <!-- UPDATE 29 -->
+            <li>
+              <span class="font-semibold">
+                Mar 2019:
+              </span>
+              2 Paper accepted  at
+              <a class="underline text-blue-500" href="https://ieeexplore.ieee.org/xpl/conhome/8931128/proceeding">
+                ICASERT
+              </a>
+            </li>
           </ul>
         </div>
-     </section>
-
-    <!-- Preprints Section -->
-    <section class="about container">
-      <!-- <br> -->
-      <div class="section-title">
-        <h2>Preprints</h2>
-      </div>
-      <div class="pt-0 pt-lg-0 content" data-aos="fade-left">
-        <div class="font-italic ml-3" data-aos="fade-left">
-          <a class="text-xl font-bold underline text-blue-500" href="https://www.biorxiv.org/content/10.1101/2024.08.20.608885v1">Deep Learning-driven Automatic Nuclei Segmentation of Label-free Live Cell Chromatin-sensitive Partial Wave Spectroscopic Microscopy Imaging</a> (August - 2024)
-          <p> Authors - Md Shahin Alom, Sunil Kumar Gaire, Ali Daneshkhah, Nicolas Acosta, Nick Anthony, Emily Pujadas, Vadim Bckman</p>
+      </section>
+      <!-- END SECTION: updates -->
+      <!-- ============================================================
+    RESUME: research interests and education
+    ============================================================ -->
+      <section id="resume">
+        <h2 class="section-heading">
+          Resume
+        </h2>
+        <div class="grid two">
+          <article class="card">
+            <h3 style="margin:0 0 8px;">
+              Research interests
+            </h3>
+            <ul class="tag-list">
+              <!-- RESEARCH INTERESTS: copy one li to add a topic. -->
+              <li>
+                Machine Learning
+              </li>
+              <li>
+                Deep Learning
+              </li>
+              <li>
+                Computer Vision
+              </li>
+              <li>
+                Biomedical Imaging
+              </li>
+              <li>
+                Healthcare with AI
+              </li>
+              <li>
+                Human Computer Interaction
+              </li>
+              <li>
+                Robotics
+              </li>
+              <li>
+                Clinican AI Research
+              </li>
+              <li>
+                Data Science
+              </li>
+            </ul>
+          </article>
+          <article class="card education">
+            <!-- EDUCATION: copy a degree paragraph, including its br elements and links. -->
+            <h3>
+              Education
+            </h3>
+            <p>
+              <strong>
+                Ph.D., Electrical & Computer Engineering
+              </strong>
+              <br/>
+              North Carolina A&T State University · (Aug 2023–Present)
+              <br/>
+              Expected CGPA: 3.90/4.00
+            </p>
+            <p>
+              <strong>
+                M.Sc., Electrical & Computer Engineering
+              </strong>
+              <br/>
+              North Carolina A&T State University · (Aug 2023–Mar 2025)
+              <br/>
+              CGPA: 3.84/4.00
+            </p>
+            <p>
+              <strong>
+                B.Sc., Electrical & Electronic Engineering
+              </strong>
+              <br/>
+              Hajee Mohammad Danesh Science and Technology University · (2016–2021)
+              <br/>
+              CGPA: 3.58/4.00
+              <a class="underline text-blue-500" href="https://tinyurl.com/2kmkhrmh" rel="noopener noreferrer" target="_blank">
+                (Thesis-I)
+              </a>
+              <a class="underline text-blue-500" href="https://tinyurl.com/52vwrbzs" rel="noopener noreferrer" target="_blank">
+                (Thesis-II)
+              </a>
+            </p>
+            <p>
+              <strong>
+                Higher Secondary Certificate
+              </strong>
+              <br/>
+              Notre Dame College, Dhaka · GPA: 5.00/5.00
+            </p>
+          </article>
         </div>
-      </div>
-     </section>
-
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume container">
-      <div class="">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Summary</h3>
-            <div class="resume-item pb-0">
-              <h4>Shahin Alom</h4>
-              <p><em>I'm currently pursuing my PhD Degree under the guadance of <a target="_blank" href="https://sites.google.com/site/sunilgaire">Dr. Sunil Kumar Gaire</a> from NCAT in Electrical & Computer Engineering. I am always curious to learn new technology and skills.</em></p>
-              <p>  </p>
-              <ul>
-                <!-- <li>Enayetpur, Sirajganj, Bangladesh</li> -->
-                <!-- <li>+8801704801703</li> -->
-                <!-- <li>ashahin200@gmail.com</li> -->
-              </ul>
-              <!-- <br> -->
-            </div>
-            
-            <h3 class="resume-title">Area of Interest</h3>
-           
-            <div class="resume-item">
-              <h6>Machine Learning</h6>
-            </div>
-            <div class="resume-item">
-              <h6>Deep Learning</h6>
-            </div>
-            <div class="resume-item">
-              <h6>Computer Vision</h6>
-            </div>
-            <div class="resume-item">
-              <h6>Robotics</h6>
-            </div>
-            <div class="resume-item">
-              <h6>Internet of Things</h6>
-            </div>
-            <div class="resume-item">
-              <h6>Data Science</h6>
-              <!-- <br> -->
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Education</h3>
-
-            <div class="resume-item">
-              <h4>Ph.D. in Electrical & Computer Engineering</h4>
-              <h5>2023 - Present</h5>
-              <p><em><b>North Carolina A&T State University</b></em></p>
-              <!-- <p> CGPA 3.58 (out of 4).</p> -->
-            </div>
-
-            <div class="resume-item">
-              <h4>B.Sc in Electrical & Electronic Engineering</h4>
-              <h5>2016 - 2021</h5>
-              <p><em><b> Hajee Mohammad Danesh Science and Technology University (HSTU), Bangladesh</b></em></p>
-              <p> CGPA 3.58 (out of 4).</p>
-            </div>          
-
-            <div class="resume-item">
-              <h4>Higher Secondary Certificate (H. S.C)</h4>
-              <h5>2013 - 2015</h5>
-              <p><em><b>Notre Dame College, Dhaka, Bangladesh</b></em></p>
-              <p>with GPA 5(out of 5).</p>
-            </div>
-            <div class="resume-item">
-              <h4>Secondary School Certificate (S.S.C)</h4>
-              <h5>2011 - 2013</h5>
-              <p><em><b>Sthal Pakrashi Institution School and College, Sirajganj, Bangladesh</b></em></p>
-              <p>with GPA 5(out of 5).</p>
-            </div>
+      </section>
+      <!-- END SECTION: resume -->
+      <!-- ============================================================
+    PREPRINTS: titles, authors, dates, and links
+    ============================================================ -->
+      <section id="preprints">
+        <h2 class="section-heading">
+          Preprints
+        </h2>
+        <div class="card">
+          <!-- PREPRINTS: copy an existing entry and update the title, date, authors, and URL. -->
+          <div class="font-italic ml-3">
+            <a class="text-xl font-bold underline text-blue-500" href="https://www.biorxiv.org/content/10.1101/2024.08.20.608885v1">
+              Deep Learning-driven Automatic Nuclei Segmentation of Label-free Live Cell Chromatin-sensitive Partial Wave Spectroscopic Microscopy Imaging
+            </a>
+            (August - 2024)
+            <p>
+              Authors -
+              <b>
+                Md Shahin Alom
+              </b>
+              , Sunil Kumar Gaire, Ali Daneshkhah, Nicolas Acosta, Nick Anthony, Emily Pujadas, Vadim Bckman
+            </p>
           </div>
         </div>
-
-      </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Research Section ======= -->
-   <section class="resume">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Research Publication</h2>
-
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12" data-aos="fade-up">
-          <h5><p><b>Some of my Research work : </b></p></h5>
-          <br>
-          <div class="resume-item pb-0">
-            <h4>Cricket Sentiment Analysis from Bangla Text Using Recurrent Neural Network with Long Short Term Memory Model</h4>
-            <p><em><b>Abstract</b>:
-              Nowadays, people used to express their feelings, thoughts, suggestions and opinions on different social platform and video sharing media. Many discussions are made on Twitter, Facebook and many respective forums on sports especially cricket and football. The opinion may express criticism in different manner,.</em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://doi.org/10.1109/ICBSLP47725.2019.201500">Read more...</a></li>
-            </ul>
-            
-          </div>
-          <div class="resume-item pb-0">
-            <h4>Digit Recognition in Sign Language Based on Convolutional Neural Network and Support Vector Machine</h4>
-            <p><em><b>Abstract</b>:
-              Hearing and speech impaired individuals communicate using sign language among themselves and to the normal people. But it is challenging for non-sign language speaker to understand the sign language. Thus, sign language speaker or signer often finds difficulties in expressing their feelings. </em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://doi.org/10.1109/STI47673.2019.9067999">Read more...</a></li>
-            </ul>
-            
-          </div>
-
-          <div class="resume-item pb-0">
-            <h4>Bangla Compound Character Recognition by Combining Deep Convolutional Neural Network with Bidirectional Long Short-Term Memory</h4>
-            <p><em><b>Abstract</b>:
-              Recognition of Bangla handwritten compound characters has a significant role in Bangla language in order to develop a complete Bangla OCR. It is a challenging task owing to its </em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://doi.org/10.1109/EICT48899.2019.9068817">Read more...</a></li>
-            </ul>
-            
-          </div>
-
-          <div class="resume-item pb-0">
-            <h4>Deep Convolutional Neural Network for Microscopic Bacteria Image Classification</h4>
-            <p><em><b>Abstract</b>:
-              Bacterial classification is crucial in medical science in order to diagnosis specific causative agent of numerous fatal diseases. Moreover, treatment of bacterial infection has also been possible through understanding of its nature and classification. Besides that, </em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://doi.org/10.1109/ICAEE48663.2019.8975588">Read more...</a></li>
-            </ul>
-            
-          </div>
-
-          <div class="resume-item pb-0">
-            <h4>Deep Convolutional Neural Network Exploiting Transfer Learning for Country Recognition by Classifying Passport Cover</h4>
-            <p><em><b>Abstract</b>:
-              Nowadays, Citizen of one country is traveling to another country to settle their various needs through widespread modern transportation system. However, Passport </em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://doi.org/10.1109/ICAEE48663.2019.8975666">Read more...</a></li>
-            </ul>
-            
-          </div>
-
-          <div class="resume-item pb-0">
-            <h4>Performance Analysis of Machine Learning Techniques for Microscopic Bacteria Image Classification</h4>
-            <p><em><b>Abstract</b>:
-              Microscopic bacterial image classification is of great significance in medical science in order to diagnosis numerous fatal diseases caused by bacteria.</em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://doi.org/10.1109/ICCCNT45670.2019.8944597">Read more...</a></li>
-            </ul>
-            
-          </div>
-          <div class="resume-item pb-0">
-            <h4>Rice Disease Identification and Classification by Integrating Support Vector Machine With Deep Convolutional Neural Network</h4>
-            <p><em><b>Abstract</b>:
-              Over the world, rice is one of the most extensively consuming staple foods. But due to various diseases of rice, farmers can't yield rice according to their expectation..</em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://doi.org/10.1109/ICASERT.2019.8934568">Read more...</a></li>
-            </ul>
-            
-          </div>
-
-          <div class="resume-item pb-0">
-            <h4>Wireless Home Automation System Using IoT and PaaS</h4>
-            <p><em>	<b>Abstract</b>:
-              Home automation based on Internet of Things (IoT) is getting huge attention of mass people in recent years. Smart home eases and secures the management of the home appliances.
-              </em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://doi.org/10.1109/ICASERT.2019.8934676">Read more...</a></li>
-            </ul>
-            
-          </div>
-          
-
+      </section>
+      <!-- END SECTION: preprints -->
+      <!-- ============================================================
+    SELECTED RESEARCH PUBLICATIONS
+    ============================================================ -->
+      <section id="research">
+        <h2 class="section-heading">
+          Selected Research Publications
+        </h2>
+        <h4 class="section-intro">
+          View my most recent research work on
+          <a href="https://scholar.google.com/citations?hl=en&user=BjRRjtQAAAAJ&view_op=list_works&sortby=pubdate" rel="noopener noreferrer" target="_blank">
+            <b>
+              Google Scholar
+            </b>
+          </a>
+          and
+          <a href="https://www.researchgate.net/profile/Md-Shahin-Alom/research" rel="noopener noreferrer" target="_blank">
+            <b>
+              ResearchGate
+            </b>
+          </a>
+          .
+        </h4>
+        <div class="card">
+          <!-- PUBLICATIONS: copy an entire article.item block below to add a publication. -->
+          <!-- PUBLICATION 01 -->
+          <article class="item">
+            <h3>
+              Deep Convolutional Neural Network for Microscopic Bacteria Image Classification
+            </h3>
+            <p>
+              Deep-learning approaches for classifying microscopic bacterial imagery to support biomedical analysis
+              <a class="underline text-blue-500" href="https://doi.org/10.1109/ICAEE48663.2019.8975588" rel="noopener noreferrer" target="_blank">
+                Read more...
+              </a>
+              .
+            </p>
+          </article>
+          <!-- PUBLICATION 02 -->
+          <article class="item">
+            <h3>
+              Performance Analysis of Machine Learning Techniques for Microscopic Bacteria Image Classification
+            </h3>
+            <p>
+              Comparative evaluation of machine-learning methods for microscopic bacterial image classification
+              <a class="underline text-blue-500" href="https://doi.org/10.1109/ICCCNT45670.2019.8944597" rel="noopener noreferrer" target="_blank">
+                Read more...
+              </a>
+              .
+            </p>
+          </article>
+          <!-- PUBLICATION 03 -->
+          <article class="item">
+            <h3>
+              Digit Recognition in Sign Language Based on Convolutional Neural Network and Support Vector Machine
+            </h3>
+            <p>
+              A computer-vision approach for recognizing sign-language digits using CNN and SVM methods
+              <a class="underline text-blue-500" href="https://doi.org/10.1109/STI47673.2019.9067999" rel="noopener noreferrer" target="_blank">
+                Read more...
+              </a>
+              .
+            </p>
+          </article>
+          <!-- PUBLICATION 04 -->
+          <article class="item">
+            <h3>
+              Bangla Compound Character Recognition Using Deep CNN and Bidirectional LSTM
+            </h3>
+            <p>
+              A hybrid deep-learning method for recognition of handwritten Bangla compound characters
+              <a class="underline text-blue-500" href="https://doi.org/10.1109/EICT48899.2019.9068817" rel="noopener noreferrer" target="_blank">
+                Read more...
+              </a>
+              .
+            </p>
+          </article>
+          <!-- PUBLICATION 05 -->
+          <article class="item">
+            <h3>
+              Cricket Sentiment Analysis from Bangla Text Using Recurrent Neural Networks with LSTM
+            </h3>
+            <p>
+              Sentiment analysis of Bangla-language social-media discussions related to cricket
+              <a class="underline text-blue-500" href="https://doi.org/10.1109/ICBSLP47725.2019.201500" rel="noopener noreferrer" target="_blank">
+                Read more...
+              </a>
+              .
+            </p>
+          </article>
+          <!-- PUBLICATION 06 -->
+          <article class="item">
+            <h3>
+              Rice Disease Identification Using SVM and Deep Convolutional Neural Networks
+            </h3>
+            <p>
+              Image-based identification and classification of rice diseases using machine learning
+              <a class="underline text-blue-500" href="https://doi.org/10.1109/ICASERT.2019.8934568" rel="noopener noreferrer" target="_blank">
+                Read more...
+              </a>
+              .
+            </p>
+          </article>
         </div>
-
-       
-      </div>
-
-    </div>
-  </section>
-
-   <!-- ======= Project Section ======= -->
-  <section class="resume">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Projects</h2>
-        <h5><p><b> Some of my Projects : </b></p></h5>
-
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12" data-aos="fade-up">
-          <div class="resume-item pb-0">
-            <h4>Deploy-Image-Classificion-app-using-Flask</h4>
-            <p><em>This is a deep learning project. I used Convolutional Neural Networks to classify MNIST handwritten data. For more convenient propose of test data, used flask microweb framework to deploy it in a server and then you can access and test it remotely from any desktop browser. You can also test it from your desktop localhost..</em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://github.com/ashahin200/Deploy-Image-Classificion-app-using-Flask">Project Link</a></li>
-            </ul>
-            
-          </div>
-
-          <div class="resume-item pb-0">
-            <h4>Covid19 prediction from X-ray image</h4>
-            <p><em>Covid_19 X_ray image prediction using Convolution Neural network. This is a demo project..</em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://github.com/ashahin200/Covid_19">Project Link</a></li>
-            </ul>
-            
-          </div>
-
-          <div class="resume-item pb-0">
-            <h4>Real Time Face Mask Detection using Deep Learning and Computer Vision</h4>
-            <p><em>Real Time Face Recognition using Deep Learning and Opencv.</em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://github.com/ashahin200/Image_augmentation">Project Link</a></li>
-            </ul>
-            
-          </div>
-
-          <div class="resume-item pb-0">
-            <h4>Emotion Recognition with Keras</h4>
-            <p><em>Emotion Recognition with Keras.</em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://github.com/ashahin200/Emotion-Recognition-with-Keras">Project Link</a></li>
-            </ul>
-            
-          </div>
-
-          <div class="resume-item pb-0">
-            <h4>Principal_Component_Analysis</h4>
-            <p><em>Reduce the dimension of a dateset by extracting only high variance data structure.</em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://github.com/ashahin200/Principal_Component_Analysis">Project Link</a></li>
-            </ul>
-            
-          </div>
-
-          <div class="resume-item pb-0">
-            <h4>Robotics & Embedded Sysytem Design</h4>
-            <p><em><li>	Wireless Home Automation System Using Arduino and Ethernet Shield.</li><li> Semi-autonomous quad-copter Drone</li><li> Autonomous line and wall follower robot</li><li> Automatic Alcohol Detecting Device with Engine
+      </section>
+      <!-- END SECTION: research -->
+      <!-- ============================================================
+    PROJECTS: descriptions and repository links
+    ============================================================ -->
+      <section id="projects">
+        <h2 class="section-heading">
+          Projects
+        </h2>
+        <div class="grid three">
+          <!-- PROJECTS: copy an entire article.card block below to add a project. -->
+          <!-- PROJECT 01 -->
+          <article class="card">
+            <h3 style="margin:0; font-size:1rem;">
+              Image Classification App
+              <a class="underline text-blue-500" href="https://github.com/ashahin200/Deploy-Image-Classificion-app-using-Flask" rel="noopener noreferrer" target="_blank">
+                (Link)
+              </a>
+            </h3>
+            <p class="meta">
+              Flask · CNN · MNIST
+            </p>
+            <p style="margin:7px 0 0; font-size:.93rem; color:#415069;">
+              A Flask-based web application for testing a CNN image classifier on handwritten digits.
+            </p>
+          </article>
+          <!-- PROJECT 02 -->
+          <article class="card">
+            <h3 style="margin:0; font-size:1rem;">
+              COVID-19 X-Ray Prediction
+              <a class="underline text-blue-500" href="https://github.com/ashahin200/Covid_19" rel="noopener noreferrer" target="_blank">
+                (Link)
+              </a>
+            </h3>
+            <p class="meta">
+              CNN · Medical imaging
+            </p>
+            <p style="margin:7px 0 0; font-size:.93rem; color:#415069;">
+              A demonstration project applying convolutional neural networks to chest X-ray image prediction.
+            </p>
+          </article>
+          <!-- PROJECT 03 -->
+          <article class="card">
+            <h3 style="margin:0; font-size:1rem;">
+              Real-Time Face Mask Detection
+              <a class="underline text-blue-500" href="https://github.com/ashahin200/Image_augmentation" rel="noopener noreferrer" target="_blank">
+                (Link)
+              </a>
+            </h3>
+            <p class="meta">
+              Deep learning · OpenCV
+            </p>
+            <p style="margin:7px 0 0; font-size:.93rem; color:#415069;">
+              A computer-vision project for real-time face-mask detection.
+            </p>
+          </article>
+          <!-- PROJECT 04 -->
+          <article class="card">
+            <h3 style="margin:0; font-size:1rem;">
+              Emotion Recognition with Keras
+              <a class="underline text-blue-500" href="https://github.com/ashahin200/Emotion-Recognition-with-Keras" rel="noopener noreferrer" target="_blank">
+                (Link)
+              </a>
+            </h3>
+            <p class="meta">
+              Keras · Computer vision
+            </p>
+            <p style="margin:7px 0 0; font-size:.93rem; color:#415069;">
+              A deep-learning project for recognizing facial emotions.
+            </p>
+          </article>
+          <!-- PROJECT 05 -->
+          <article class="card">
+            <h3 style="margin:0; font-size:1rem;">
+              Principal Component Analysis
+              <a class="underline text-blue-500" href="https://github.com/ashahin200/Principal_Component_Analysis" rel="noopener noreferrer" target="_blank">
+                (Link)
+              </a>
+            </h3>
+            <p class="meta">
+              Data science · Dimensionality reduction
+            </p>
+            <p style="margin:7px 0 0; font-size:.93rem; color:#415069;">
+              A project exploring dimensionality reduction by retaining high-variance data structure.
+            </p>
+          </article>
+          <!-- PROJECT 06 -->
+          <article class="card">
+            <h3 style="margin:0; font-size:1rem;">
+              Robotics & Embedded System Design
+              <a class="underline text-blue-500" href="https://www.youtube.com/channel/UCwCItw_xlM9aN_O6U8S-DtQ" rel="noopener noreferrer" target="_blank">
+                (Link)
+              </a>
+            </h3>
+            <p class="meta">
+              Robotics · Embedded systems
+            </p>
+            <p style="margin:7px 0 0; font-size:.93rem; color:#415069;">
+              Exploratory work in robotics and embedded-system design.
+            </p>
+          </article>
+        </div>
+      </section>
+      <!-- END SECTION: projects -->
+      <!-- <section id="projects"><h2 class="section-heading">Projects</h2><div class="grid two"><div class="card restored-project">
+<h4>Deploy-Image-Classificion-app-using-Flask</h4>
+<p><em>This is a deep learning project. I used Convolutional Neural Networks to classify MNIST handwritten data. For more convenient propose of test data, used flask microweb framework to deploy it in a server and then you can access and test it remotely from any desktop browser. You can also test it from your desktop localhost..</em></p>
+<ul>
+<li><a class="underline text-blue-500" href="https://github.com/ashahin200/Deploy-Image-Classificion-app-using-Flask" rel="noopener noreferrer" target="_blank">Project Link</a></li>
+</ul>
+</div><div class="card restored-project">
+<h4>Covid19 prediction from X-ray image</h4>
+<p><em>Covid_19 X_ray image prediction using Convolution Neural network. This is a demo project..</em></p>
+<ul>
+<li><a class="underline text-blue-500" href="https://github.com/ashahin200/Covid_19" rel="noopener noreferrer" target="_blank">Project Link</a></li>
+</ul>
+</div><div class="card restored-project">
+<h4>Real Time Face Mask Detection using Deep Learning and Computer Vision</h4>
+<p><em>Real Time Face Recognition using Deep Learning and Opencv.</em></p>
+<ul>
+<li><a class="underline text-blue-500" href="https://github.com/ashahin200/Image_augmentation" rel="noopener noreferrer" target="_blank">Project Link</a></li>
+</ul>
+</div><div class="card restored-project">
+<h4>Emotion Recognition with Keras</h4>
+<p><em>Emotion Recognition with Keras.</em></p>
+<ul>
+<li><a class="underline text-blue-500" href="https://github.com/ashahin200/Emotion-Recognition-with-Keras" rel="noopener noreferrer" target="_blank">Project Link</a></li>
+</ul>
+</div><div class="card restored-project">
+<h4>Principal_Component_Analysis</h4>
+<p><em>Reduce the dimension of a dateset by extracting only high variance data structure.</em></p>
+<ul>
+<li><a class="underline text-blue-500" href="https://github.com/ashahin200/Principal_Component_Analysis" rel="noopener noreferrer" target="_blank">Project Link</a></li>
+</ul>
+</div><div class="card restored-project">
+<h4>Robotics &amp; Embedded System Design</h4>
+<p><em><li>	Wireless Home Automation System Using Arduino and Ethernet Shield.</li><li> Semi-autonomous quad-copter Drone</li><li> Autonomous line and wall follower robot</li><li> Automatic Alcohol Detecting Device with Engine
               Locking System
               </li></em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://www.youtube.com/channel/UCwCItw_xlM9aN_O6U8S-DtQ">Project Link</a></li>
-            </ul>
-            
-          </div>
-          
-
+<ul>
+<li><a class="underline text-blue-500" href="https://www.youtube.com/channel/UCwCItw_xlM9aN_O6U8S-DtQ" rel="noopener noreferrer" target="_blank">Project Link</a></li>
+</ul>
+</div></div></section> -->
+      <!-- ============================================================
+    CERTIFICATES AND AWARDS: linked image thumbnails
+    ============================================================ -->
+      <section id="certifications">
+        <h2 class="section-heading">
+          Certificates & awards
+        </h2>
+        <div class="certificate-grid">
+          <!-- CERTIFICATES: copy one anchor with its img; update href, src, and alt text. -->
+          <!-- CERTIFICATE 01 -->
+          <a href="https://i.ibb.co/GFtCXVV/Abdus-Saalam-scholarship.jpg" rel="noopener noreferrer" target="_blank">
+            <img alt="Certificate or academic award" class="" loading="lazy" src="https://i.ibb.co/GFtCXVV/Abdus-Saalam-scholarship.jpg"/>
+          </a>
+          <!-- CERTIFICATE 02 -->
+          <a href="https://i.ibb.co/cvh1dfQ/Best-Poster-Award.jpg" rel="noopener noreferrer" target="_blank">
+            <img alt="Certificate or academic award" class="" loading="lazy" src="https://i.ibb.co/cvh1dfQ/Best-Poster-Award.jpg"/>
+          </a>
+          <!-- CERTIFICATE 03 -->
+          <a href="https://i.ibb.co/PWzr7WH/class-10-scholarship.jpg" rel="noopener noreferrer" target="_blank">
+            <img alt="Certificate or academic award" class="" loading="lazy" src="https://i.ibb.co/PWzr7WH/class-10-scholarship.jpg"/>
+          </a>
+          <!-- CERTIFICATE 04 -->
+          <a href="https://i.ibb.co/fXkmvGj/ICASERT.jpg" rel="noopener noreferrer" target="_blank">
+            <img alt="Certificate or academic award" class="" loading="lazy" src="https://i.ibb.co/fXkmvGj/ICASERT.jpg"/>
+          </a>
+          <!-- CERTIFICATE 05 -->
+          <a href="https://i.ibb.co/HrypmyV/psc-certificate.jpg" rel="noopener noreferrer" target="_blank">
+            <img alt="Certificate or academic award" class="" loading="lazy" src="https://i.ibb.co/HrypmyV/psc-certificate.jpg"/>
+          </a>
+          <!-- CERTIFICATE 06 -->
+          <a href="https://i.ibb.co/wWSFYG7/Project-Hub.jpg" rel="noopener noreferrer" target="_blank">
+            <img alt="Certificate or academic award" class="" loading="lazy" src="https://i.ibb.co/wWSFYG7/Project-Hub.jpg"/>
+          </a>
+          <!-- CERTIFICATE 07 -->
+          <a href="https://i.ibb.co/6tz4MQy/NDC-attendence.jpg" rel="noopener noreferrer" target="_blank">
+            <img alt="Certificate or academic award" class="" loading="lazy" src="https://i.ibb.co/6tz4MQy/NDC-attendence.jpg"/>
+          </a>
+          <!-- CERTIFICATE 08 -->
+          <a href="https://i.ibb.co/dfg55Jj/confarence-certificate-2-1.jpg" rel="noopener noreferrer" target="_blank">
+            <img alt="Certificate or academic award" class="" loading="lazy" src="https://i.ibb.co/dfg55Jj/confarence-certificate-2-1.jpg"/>
+          </a>
+          <!-- CERTIFICATE 09 -->
+          <a href="https://i.ibb.co/hM7tsRd/Nasa-Space-apps-challenge-2.jpg" rel="noopener noreferrer" target="_blank">
+            <img alt="Certificate or academic award" class="" loading="lazy" src="https://i.ibb.co/hM7tsRd/Nasa-Space-apps-challenge-2.jpg"/>
+          </a>
+          <!-- CERTIFICATE 10 -->
+          <a href="https://i.ibb.co/FHMJn07/ISBSLP.jpg" rel="noopener noreferrer" target="_blank">
+            <img alt="Certificate or academic award" class="" loading="lazy" src="https://i.ibb.co/FHMJn07/ISBSLP.jpg"/>
+          </a>
+          <!-- CERTIFICATE 11 -->
+          <a href="https://i.ibb.co/DMwkR25/Intarn-sheet.jpg" rel="noopener noreferrer" target="_blank">
+            <img alt="Certificate or academic award" class="" loading="lazy" src="https://i.ibb.co/DMwkR25/Intarn-sheet.jpg"/>
+          </a>
         </div>
-
-       
-      </div>
-
-    </div>
-  </section>
-
-   <!-- ======= Cirtification Section ======= -->
-  <section class="resume">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Certification</h2>
-      </div>
-
-      <!-- <div class="row">
-        <div class="col-lg-12" data-aos="fade-up">
-          <div class="resume-item pb-0">
-            <h4>Deploy-Image-Classificion-app-using-Flask</h4>
-            <p><em>This is a deep learning project. I used Convolutional Neural Networks to classify MNIST handwritten data. For more convenient propose of test data, used flask microweb framework to deploy it in a server and then you can access and test it remotely from any desktop browser. You can also test it from your desktop localhost..</em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://github.com/ashahin200/Deploy-Image-Classificion-app-using-Flask">Project Link</a></li>
-            </ul>
-            
+      </section>
+      <!-- END SECTION: certifications -->
+      <!-- ============================================================
+    CONTACT: location, email, and additional profiles
+    ============================================================ -->
+      <section id="contact">
+        <h2 class="section-heading">
+          Contact
+        </h2>
+        <div class="card">
+          <div class="info">
+            <div class="address">
+              <i class="icofont-google-map">
+              </i>
+              <h4>
+                Location: Current
+              </h4>
+              <p>
+                Greensboro, NC, USA
+              </p>
+            </div>
+            <div class="email">
+              <i class="icofont-envelope">
+              </i>
+              <h4>
+                Email:
+              </h4>
+              <a href="mailto:ashahin200@gmail.com?Subject=Hello" rel="noopener noreferrer" target="_blank">
+                <p>
+                  ashahin200@gmail.com
+                </p>
+              </a>
+            </div>
           </div>
-
-          <div class="resume-item pb-0">
-            <h4>Covid19 prediction from X-ray image</h4>
-            <p><em>Covid_19 X_ray image prediction using Convolution Neural network. This is a demo project..</em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://github.com/ashahin200/Covid_19">Project Link</a></li>
-            </ul>
-            
-          </div>
-
-          <div class="resume-item pb-0">
-            <h4>Real Time Face Mask Detection using Deep Learning and Computer Vision</h4>
-            <p><em>Real Time Face Recognition using Deep Learning and Opencv.</em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://github.com/ashahin200/Image_augmentation">Project Link</a></li>
-            </ul>
-            
-          </div>
-
-          <div class="resume-item pb-0">
-            <h4>Emotion Recognition with Keras</h4>
-            <p><em>Emotion Recognition with Keras.</em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://github.com/ashahin200/Emotion-Recognition-with-Keras">Project Link</a></li>
-            </ul>
-            
-          </div>
-
-          <div class="resume-item pb-0">
-            <h4>Principal_Component_Analysis</h4>
-            <p><em>Reduce the dimension of a dateset by extracting only high variance data structure.</em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://github.com/ashahin200/Principal_Component_Analysis">Project Link</a></li>
-            </ul>
-            
-          </div>
-
-          <div class="resume-item pb-0">
-            <h4>Robotics & Embedded Sysytem Design</h4>
-            <p><em><li>	Wireless Home Automation System Using Arduino and Ethernet Shield.</li><li> Semi-autonomous quad-copter Drone</li><li> Autonomous line and wall follower robot</li><li> Automatic Alcohol Detecting Device with Engine
-              Locking System
-              </li></em></p>
-       
-            <ul>
-              
-              <li><a class="underline text-blue-500" target="_blank" href="https://www.youtube.com/channel/UCwCItw_xlM9aN_O6U8S-DtQ">Project Link</a></li>
-            </ul>
-            
+          <div class="additional-links">
+            <a href="https://www.facebook.com/ashahin200">
+              Facebook
+            </a>
+            <a href="https://www.youtube.com/channel/UCKtanq2MXoFKsMxQxL7huUQ">
+              Learn Machine Learning in Bangla — contributor
+            </a>
           </div>
         </div>
-      </div> -->
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" data-aos="fade-up">
-       <a href="">
-
-         <img class="h-44 w-full rounded-xl shadow-xl " src="https://i.ibb.co/GFtCXVV/Abdus-Saalam-scholarship.jpg" alt="cirtificate">
-       </a>
-       <a href="">
-
-         <img class="h-44 w-full rounded-xl shadow-xl" src="https://i.ibb.co/cvh1dfQ/Best-Poster-Award.jpg" alt="cirtificate">
-       </a>
-       <a href="">
-        <img class="h-44 w-full rounded-xl shadow-xl" src="https://i.ibb.co/PWzr7WH/class-10-scholarship.jpg" alt="cirtificate">
-        
-       </a>
-       <a href="">
-        <img class="h-44 w-full rounded-xl shadow-xl" src="https://i.ibb.co/fXkmvGj/ICASERT.jpg" alt="cirtificate">
-
-       </a>
-       <a href="">
-        <img class="h-44 w-full rounded-xl shadow-xl" src="https://i.ibb.co/HrypmyV/psc-certificate.jpg" alt="cirtificate">
-
-       </a>
-       <a href="">
-        <img class="h-44 w-full rounded-xl shadow-xl" src="https://i.ibb.co/wWSFYG7/Project-Hub.jpg" alt="cirtificate">
-
-       </a>
-       <a href="">
-        <img class="h-44 w-full rounded-xl shadow-xl" src="https://i.ibb.co/6tz4MQy/NDC-attendence.jpg" alt="cirtificate">
-
-       </a>
-       <a href="">
-        <img class="h-44 w-full rounded-xl shadow-xl" src="https://i.ibb.co/dfg55Jj/confarence-certificate-2-1.jpg" alt="cirtificate">
-
-       </a>
-       <a href="">
-        <img class="h-44 w-full rounded-xl shadow-xl" src="https://i.ibb.co/hM7tsRd/Nasa-Space-apps-challenge-2.jpg" alt="cirtificate">
-
-       </a>
-       <a href="">
-        <img class="h-44 w-full rounded-xl shadow-xl" src="https://i.ibb.co/FHMJn07/ISBSLP.jpg" alt="cirtificate">
-
-       </a>
-       <a href="">
-
-         <img class="h-44 w-full rounded-xl shadow-xl" src="https://i.ibb.co/DMwkR25/Intarn-sheet.jpg" alt="cirtificate">
-       </a>
-
-      </div>
-
-    </div>
-  </section>
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+      </section>
+      <!-- END SECTION: contact -->
+    </main>
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer>
       <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-12 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="icofont-google-map"></i>
-                <h4>Location: Current</h4>
-                <p>Greensboro, NC, USA</p>
-              </div>
-
-              <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>Email:</h4>
-                <a href="mailto:ashahin200@gmail.com?Subject=Hello" target="_blank">
-                <p>ashahin200@gmail.com</p>
-                </a>
-              </div>
-             </div>
-
-          </div>
-
-    
-
-        </div>
-
+        © Shahin Alom · Biomedical imaging and deep-learning research
       </div>
-    </section><!-- End Contact Section -->
-
-
-    <div class="container" style=" margin: auto;
-  padding: 10px;background-color: rgb(83, 86, 94);">
-      <div style="margin-left: 30%;color: white;" class="copyright">
-        &copy; Copyright <strong><span>Shahin</span></strong>
-      </div>
-      <div style="margin-left: 30%;color: aquamarine;" class="credits">
-      Designed by <a href="#">BootstrapMade</a>
-      </div>
-    </div>
-  </main>
-
-  <!-- ======= Footer ======= -->
-<!-- End  Footer -->
-
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+    </footer>
+  </body>
 </html>
